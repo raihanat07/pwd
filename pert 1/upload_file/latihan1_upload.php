@@ -6,6 +6,7 @@ $direktori = "c:/xampp/htdocs/Prak1_WebDinamis/upload_file/$nama_file";
 if (move_uploaded_file($lokasi_file, $direktori)){
     echo "Nama File: <b>$nama_file</b> berhasil di upload <br>";
     echo "Deskripsi File :<br>$deskripsi";
+    echo "dokumenkuliah:  berhasil di upload <br>";
 } else {
     echo "File gagal diupload";
 }
