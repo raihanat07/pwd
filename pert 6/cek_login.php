@@ -5,6 +5,7 @@ include "../Praktikum3/koneksi.php";
 // Ambil data dan kirimkan data yang terdiri dari id, password untuk melakukan pengecekan
 $id_user = $_POST['id_user'];
 $pass = md5($_POST['paswd']);
+$nama = $_POST['nama'];
 // ambil data berdasarkan id dan password dari tabel users untuk melakukan pengecekan pada database
 $sql = "SELECT * FROM users WHERE id_user='$id_user' AND password='$pass'";
 if ($_POST["captcha_code"] == $_SESSION["captcha_code"]) {
@@ -19,10 +20,12 @@ if ($_POST["captcha_code"] == $_SESSION["captcha_code"]) {
         // lakukan session untuk menampilkan informasi data user
         $_SESSION['iduser'] = $r['id_user'];
         $_SESSION['passuser'] = $r['password'];
+        $_SESSION['nama'] = $r['nama'];
         // tampilkan data dibawah
         echo "USER BERHASIL LOGIN<br>";
         echo "id user =", $_SESSION['iduser'], "<br>";
         echo "password=", $_SESSION['passuser'], "<br>";
+        echo "Nama=", $_SESSION['nama'], "<br>";
         echo "<a href=logout.php><b>LOGOUT</b></a></center>";
         // jika data tida ada atau 0
     } else {

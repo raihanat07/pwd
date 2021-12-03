@@ -11,6 +11,10 @@ echo "<h2>Login</h2>
             <td> : <input name='paswd' type='text'></td>
         </tr>
         <tr>
+            <td>Nama User</td>
+            <td> : <input name='nama' type='varchar'></td>
+        </tr>
+        <tr>
             <td>Captcha<br>
             <img src='captcha.php' /></td><td> : <input name='captcha_code' type='text'></td>
         </tr>
